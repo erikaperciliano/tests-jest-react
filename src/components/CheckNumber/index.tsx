@@ -33,7 +33,7 @@ export const CheckNumber = () => {
         
             <p>{isEven ? 'Odd' : 'Even'}</p>
 
-            <p>{errorMessage}</p>
+            <p role="alert">{errorMessage}</p>
         </div>
     )
 }

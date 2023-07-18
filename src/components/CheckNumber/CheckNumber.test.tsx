@@ -18,4 +18,15 @@ describe('<CheckNumber/>', () => {
 
         expect(input).toBeInTheDocument;
     })
+
+    describe('When there is no erro', () => {
+        test('renders the error message section empty', () => {
+            render(<CheckNumber/>);
+
+            const alert = screen.getByRole('alert')
+
+            expect(alert).toBeInTheDocument;
+            expect(alert).toBeEmptyDOMElement;
+        })
+    })
 })
