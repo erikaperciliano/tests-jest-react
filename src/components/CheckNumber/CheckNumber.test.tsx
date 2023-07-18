@@ -10,4 +10,12 @@ describe('<CheckNumber/>', () => {
 
         expect(title).toBeInTheDocument;
     })
+
+    test('renders an input', () => {
+        render(<CheckNumber/>);
+
+        const input = screen.getByPlaceholderText('Type a number');
+
+        expect(input).toBeInTheDocument;
+    })
 })
