@@ -31,7 +31,7 @@ export const CheckNumber = () => {
                 }}
             />
         
-            <p>{isEven ? 'Odd' : 'Even'}</p>
+            <p role="presentation">{isEven ? 'Odd' : 'Even'}</p>
 
             <p role="alert">{errorMessage}</p>
         </div>

@@ -5,6 +5,8 @@
 /.pnp
 .pnp.js
 
+@ts-ignore 
+
 # testing
 /coverage
 
