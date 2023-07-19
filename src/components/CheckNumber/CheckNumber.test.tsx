@@ -49,4 +49,19 @@ describe('<CheckNumber/>', () => {
             expect(section.textContent).toBe('Even')
         })
     })
+
+    describe('When the user  types an even number', () =>{
+        test('renders Odd on the screen', () =>{
+            render(<CheckNumber/>);
+
+            const input = getInput();
+
+            userEvent.clear(input);
+            userEvent.type(input, '12');
+
+            const section = screen.getByRole('presentation');
+
+            expect(section.textContent).toBe('Odd')
+        })
+    })
 })
