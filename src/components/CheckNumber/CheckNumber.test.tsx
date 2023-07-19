@@ -64,4 +64,19 @@ describe('<CheckNumber/>', () => {
             expect(section.textContent).toBe('Odd')
         })
     })
+
+    describe('When the user pypes a not number value', () => {
+        test('renders the error message on the screen', () =>{
+            render(<CheckNumber/>);
+
+            const input = getInput();
+
+            userEvent.clear(input);
+            userEvent.type(input, 'potato');
+
+            const section = screen.getByRole('alert');
+
+            expect(section.textContent).toBe('Type a number please!')
+        })
+    })
 })
